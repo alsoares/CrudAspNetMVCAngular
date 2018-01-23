@@ -1,0 +1,22 @@
+﻿<div ng-controller="crudController">
+    <table class="table table-striped">
+        <tr ng-repeat="item in items">
+            <td> {{item.Name}} </td>
+            <td class="text-right">
+                <button class="btn btn-danger" ng-click="Delete(item)" data-toggle="tooltip">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+    <div id="formItem">
+        <div class="form-group">
+            <label for="NameItem">Name</label>
+            <input type="text" id="NameItem" required ng-model="item.NameItem" />
+        </div>
+        <div class="form-group">
+            <a href="#" class="btn btn-primary" ng-click="Add(item)" data-toggle="tooltip">Add Item</a>
+        </div>
+    </div>
+
+</div>
