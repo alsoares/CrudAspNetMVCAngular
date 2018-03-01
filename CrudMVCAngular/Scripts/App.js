@@ -1,11 +1,10 @@
-﻿var app = angular.module("crudApp", []);
+﻿var app = angular.module("crudMVCAngularApp", []);
 
-app.controller("crudController", function ($scope, $http) {
+app.controller("crudMVCAngularController", function ($scope, $http) {
 
     $http({
         method: 'GET',
         url: 'Home/GetAll'
-
     }).then(function (sucess) {
         $scope.items = sucess.data;
     }, function (error) {
